@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Healthcare Test Case Generator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Healthcare Test Case Generator</h1>
+
+    <div class="input-section">
+      <label for="domainFile">Upload Domain Knowledge Document:</label>
+      <input type="file" id="domainFile" accept=".txt,.md,.pdf"/>
+      <button id="uploadDomainBtn">Upload Domain Knowledge</button>
+
+      <label for="userInput">Enter User Story or Bug Report:</label>
+      <textarea id="userInput" placeholder="e.g., As a patient, I want to download my billing statement from the app so that I can keep a record for insurance claims."></textarea>
+      <button id="generateBtn">Generate Test Cases</button>
+    </div>
+
+    <div class="output-section">
+      <h2>Generated Test Cases:</h2>
+      <div id="testCaseOutput" class="test-case-output"></div>
+    </div>
+
+    <div id="loading" class="loading">Processing...</div>
+    <div id="error" class="error"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
